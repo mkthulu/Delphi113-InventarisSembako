@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/03/20 01:59:40.000.497,=D:\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/20 13:10:51.000.014,=D:\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/20 13:25:29.000.886,D:\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/03/20 13:25:29.000.886,D:\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/03/20 13:25:49.000.344,D:\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Project1.dproj</Transaction>
+    <Transaction>2023/03/20 14:39:16.000.047,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit2.pas</Transaction>
+    <Transaction>2023/03/26 18:37:42.000.028,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit3.pas</Transaction>
+    <Transaction>2023/03/26 18:54:35.000.934,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit2.pas=</Transaction>
+    <Transaction>2023/03/26 18:56:01.000.284,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\main.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/03/26 18:56:01.000.284,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\main.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/03/26 19:05:41.000.653,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\login.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\main.dfm</Transaction>
+    <Transaction>2023/03/26 19:05:41.000.653,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\login.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\main.pas</Transaction>
+    <Transaction>2023/03/26 20:19:54.000.036,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/03/26 20:20:05.000.030,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\main.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/03/26 20:20:05.000.030,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\main.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/04/09 10:38:19.000.985,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/04/09 10:38:24.000.791,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\db.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/04/09 10:38:24.000.791,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\db.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/05/17 12:30:11.000.872,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/17 12:30:50.000.377,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/17 12:32:32.000.342,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\pbarang_tambah.pas</Transaction>
+    <Transaction>2023/05/17 12:32:32.000.342,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\pbarang_tambah.dfm</Transaction>
+    <Transaction>2023/05/17 15:02:47.000.909,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/17 15:03:04.000.332,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\pbarang_detail.dfm</Transaction>
+    <Transaction>2023/05/17 15:03:04.000.332,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\pbarang_detail.pas</Transaction>
+    <Transaction>2023/05/17 22:07:40.000.747,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\InventarisSembako.dproj=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Project1.dproj</Transaction>
+    <Transaction>2023/05/18 08:42:52.000.649,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/18 08:44:50.000.028,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppembelian_tambah.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/18 08:44:50.000.028,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppembelian_tambah.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/05/28 15:12:47.000.101,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/28 15:12:58.000.107,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppembelian_detail.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/28 15:12:58.000.107,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppembelian_detail.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/05/28 18:26:02.000.718,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/28 18:27:52.000.432,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_tambah.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/28 18:27:52.000.432,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_tambah.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/05/28 21:57:06.000.174,=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/28 21:58:36.000.181,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_detial.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.dfm</Transaction>
+    <Transaction>2023/05/28 21:58:36.000.181,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_detial.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\Unit1.pas</Transaction>
+    <Transaction>2023/05/28 21:58:46.000.300,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_detail.dfm=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_detial.dfm</Transaction>
+    <Transaction>2023/05/28 21:58:46.000.300,D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_detail.pas=D:\Documents\Janabadra\SMT 6\Pemrograman Visual\proyek\app\ppenjualan_detial.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="login.pas"/>
+    <File Path="login.dfm"/>
+    <File Path="main.pas"/>
+    <File Path="main.dfm"/>
+    <File Path="db.pas"/>
+    <File Path="db.dfm"/>
+    <File Path="pbarang_tambah.pas"/>
+    <File Path="pbarang_tambah.dfm"/>
+    <File Path="pbarang_detail.pas"/>
+    <File Path="pbarang_detail.dfm"/>
+    <File Path="ppembelian_tambah.pas"/>
+    <File Path="ppembelian_tambah.dfm"/>
+    <File Path="ppembelian_detail.pas"/>
+    <File Path="ppembelian_detail.dfm"/>
+    <File Path="ppenjualan_tambah.pas"/>
+    <File Path="ppenjualan_tambah.dfm"/>
+    <File Path="ppenjualan_detail.pas"/>
+    <File Path="ppenjualan_detail.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

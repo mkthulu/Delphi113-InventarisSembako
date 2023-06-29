@@ -1,0 +1,76 @@
+object DataModule1: TDataModule1
+  Height = 480
+  Width = 767
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;User ID=root;Data' +
+      ' Source=MySQL ODBC - Inventaris Sembako;Initial Catalog=db_inv_s' +
+      'embako'
+    LoginPrompt = False
+    Left = 32
+    Top = 24
+  end
+  object DataSourceAdmin: TDataSource
+    DataSet = ADOQueryAdmin
+    Left = 80
+    Top = 168
+  end
+  object DataSourceBarang: TDataSource
+    DataSet = ADOQueryBarang
+    Left = 184
+    Top = 168
+  end
+  object ADOQueryAdmin: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM admin LIMIT 10')
+    Left = 80
+    Top = 112
+  end
+  object ADOQueryBarang: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      
+        'SELECT * FROM goods WHERE deleted_at IS NULL ORDER BY id_goods D' +
+        'ESC LIMIT 10')
+    Left = 184
+    Top = 112
+  end
+  object ADOQueryPembelian: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      
+        'SELECT supplies.*, goods.kd_goods, goods.id_goods, goods.goods_n' +
+        'ame FROM supplies INNER JOIN goods ON supplies.goods_id=goods.id' +
+        '_goods ORDER BY id_supply DESC LIMIT 10;')
+    Left = 296
+    Top = 112
+  end
+  object DataSourcePembelian: TDataSource
+    DataSet = ADOQueryPembelian
+    Left = 296
+    Top = 168
+  end
+  object ADOQueryPembelianKeranjang: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    Left = 296
+    Top = 240
+  end
+  object DataSourcePembelianKeranjang: TDataSource
+    DataSet = ADOQueryPembelianKeranjang
+    Left = 296
+    Top = 296
+  end
+end

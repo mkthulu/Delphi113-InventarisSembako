@@ -1,0 +1,56 @@
+unit pbarang_tambah;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TFormTambahBarang = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    EditNamaBarang: TEdit;
+    EditHargaBarang: TEdit;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormTambahBarang: TFormTambahBarang;
+
+implementation
+
+uses db;
+
+{$R *.dfm}
+
+procedure TFormTambahBarang.Button1Click(Sender: TObject);
+begin
+  if not DoCheckInput(EditNamaBarang, 'Nama barang kosong!') or
+    not DoCheckInput(EditHargaBarang, 'Harga barang kosong!') then
+  begin end
+  else
+  begin
+    try
+      ExecQuery('INSERT INTO goods(goods_name, goods_price)' +
+        'VALUES (:1, :2);' , [
+        '1', '2' ], [
+        EditNamaBarang.Text,  StrToFloat(EditHargaBarang.Text)]);
+      InfoDlg('Data berhasil disimpan!');
+      EditNamaBarang.Clear;
+      EditHargaBarang.Clear;
+      DataModule1.ADOTableBarang.Active := False;
+      DataModule1.ADOTableBarang.Active := True;
+      FormTambahBarang.Hide;
+    except on E: Exception do
+      ErrorDlg('Gagal! ' + sLineBreak + E.Message);
+    end;
+  end;
+end;
+
+end.

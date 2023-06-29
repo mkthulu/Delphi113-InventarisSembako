@@ -1,0 +1,16 @@
+object FormDetailPembelian: TFormDetailPembelian
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Detail Pembelian'
+  ClientHeight = 442
+  ClientWidth = 500
+  Color = clWindow
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Verdana'
+  Font.Style = []
+  TextHeight = 14
+end

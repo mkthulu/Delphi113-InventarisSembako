@@ -1,0 +1,16 @@
+﻿[Image1]
+Coordinates=209,10,57,58
+
+[Label2]
+Coordinates=10,10,53,58
+Visible=True
+
+[]
+Coordinates=10,78,44,58
+
+[EditPassword]
+Coordinates=64,78,44,58
+
+[ButtonLogin]
+Coordinates=140,10,59,58
+

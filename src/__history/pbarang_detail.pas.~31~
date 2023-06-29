@@ -1,0 +1,74 @@
+unit pbarang_detail;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TFormDetailBarang = class(TForm)
+    Label2: TLabel;
+    EditHargaBarang: TEdit;
+    ButtonUbahBarang: TButton;
+    GroupBox1: TGroupBox;
+    EditStok: TEdit;
+    Label3: TLabel;
+    EditCreatedAt: TEdit;
+    Label4: TLabel;
+    EditUpdatedAt: TEdit;
+    Label5: TLabel;
+    EditNamaBarang: TEdit;
+    Label1: TLabel;
+    EditKodeBarang: TEdit;
+    Label6: TLabel;
+    procedure ButtonUbahBarangClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormDetailBarang: TFormDetailBarang;
+
+implementation
+
+uses db;
+
+{$R *.dfm}
+
+procedure TFormDetailBarang.ButtonUbahBarangClick(Sender: TObject);
+var
+  kd_barang: String;
+  date: String;
+begin
+  kd_barang := StringReplace(EditKodeBarang.Text, 'B', '', [rfIgnoreCase]);
+  if EmptyString(kd_barang) then
+  begin
+    ErrorDlg('Kode Barang tidak diketahui!.');
+    Exit;
+  end;
+
+  with DataModule1 do
+  begin
+    date := FormatDateTime('yyyy-mm-dd hh:nn:ss', Now);
+    try
+      ExecQuery('UPDATE goods ' +
+        'SET goods_price=:1, updated_at=:2 WHERE id_goods=:3;' , [
+        '1', '2', '3' ], [
+      EditHargaBarang.Text, date, kd_barang ]);
+      EditNamaBarang.Clear;
+      EditHargaBarang.Clear;
+      EditStok.Clear;
+      EditKodeBarang.Clear;
+      EditCreatedAt.Clear;
+      EditUpdatedAt.Clear;
+      InfoDlg('Data berhasil dihapus.');
+    except on E: Exception do
+      ErrorDlg('Gagal! ' + sLineBreak + E.Message);
+    end;
+  end;
+end;
+
+end.

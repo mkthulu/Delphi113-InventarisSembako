@@ -1,0 +1,131 @@
+unit ppenjualan_tambah;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls;
+
+type
+  TFormTambahPenjualan = class(TForm)
+    GroupBox1: TGroupBox;
+    Label7: TLabel;
+    Label8: TLabel;
+    EditNamaBarang: TEdit;
+    EditKodeBarang: TEdit;
+    EditHargaBarang: TEdit;
+    EditJumlahBarang: TEdit;
+    Label2: TLabel;
+    Label1: TLabel;
+    ButtonHapusPenjualan: TButton;
+    ButtonTambahPenjualan: TButton;
+    DBGrid1: TDBGrid;
+    ButtonSimpanPenjualan: TButton;
+    ButtonKosongkanPenjualan: TButton;
+    procedure ButtonTambahPenjualanClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ButtonHapusPenjualanClick(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormTambahPenjualan: TFormTambahPenjualan;
+
+implementation
+
+uses main, db;
+
+{$R *.dfm}
+
+procedure TFormTambahPenjualan.ButtonHapusPenjualanClick(Sender: TObject);
+begin
+  if not DoCheckInput(EditKodeBarang, 'Pilih item untuk dihapus') then
+    Exit;
+  with DataModule1 do
+  begin
+    if not ConfirmDlg('Yakin hapus data dipilih?' + sLineBreak + sLineBreak +
+      'Kode: ' + ADOQueryPenjualanKeranjang['kd_goods'] + String(ADOQueryPenjualanKeranjang['id_goods']) + sLineBreak +
+      'Nama: ' + ADOQueryPenjualanKeranjang['goods_name'] + sLineBreak +
+      'Harga: ' + String(ADOQueryPenjualanKeranjang['sale_price']) + sLineBreak +
+      'Jumlah: ' + String(ADOQueryPenjualanKeranjang['sale_qty'])) then
+      Exit;
+    try
+      ExecQuery('DELETE FROM sales_cart WHERE id_sale=:1',
+        ['1'],
+        [ADOQueryPenjualanKeranjang['id_sale']]);
+      InfoDlg('Data berhasil dihapus');
+      FormShow(Sender);
+    except on E: Exception do
+      ErrorDlg('Gagal! ' + sLineBreak + E.Message);
+    end;
+  end;
+end;
+
+procedure TFormTambahPenjualan.ButtonTambahPenjualanClick(Sender: TObject);
+var
+  date: String;
+begin
+  if not DoCheckInput(EditKodeBarang, 'Pilih item untuk ditambahkan') or
+    not DoCheckInput(EditJumlahBarang, 'Jumlah produk kosong') or
+    not DoCheckInput(EditHargaBarang, 'Harga produk kosong') then
+      Exit;
+  try
+    with DataModule1 do
+    begin
+      date := FormatDateTime('yyyy-mm-dd hh:nn:ss', Now);
+      ExecQuery('INSERT INTO sales_cart(goods_id, sale_price, sale_qty, admin_id, created_at, updated_at) ' +
+        'VALUES (:1, :2, :3, :4, :5, :6)',
+        ['1', '2', '3', '4', '5', '6'],
+        [ADOQueryBarang['id_goods'], EditHargaBarang.Text, EditJumlahBarang.Text, adminId, date, date]);
+    end;
+    InfoDlg('Data berhasil ditambahkan');
+    FormShow(Sender);
+  except on E: Exception do
+    ErrorDlg('Gagal! ' + sLineBreak + E.Message);
+  end;
+end;
+
+procedure TFormTambahPenjualan.DBGrid1CellClick(Column: TColumn);
+begin
+  with DataModule1 do
+  begin
+    if not (ADOQueryPenjualanKeranjang['goods_id'] = Null) then
+      EditKodeBarang.Text := ADOQueryPenjualanKeranjang['kd_goods'] + IntToStr(ADOQueryPenjualanKeranjang['goods_id']);
+    if not (ADOQueryPenjualanKeranjang['goods_name'] = Null) then
+      EditNamaBarang.Text := ADOQueryPenjualanKeranjang['goods_name'];
+    if not (ADOQueryPenjualanKeranjang['sale_price'] = Null) then
+      EditHargaBarang.Text := FloatToStr(ADOQueryPenjualanKeranjang['sale_price']);
+    if not (ADOQueryPenjualanKeranjang['sale_qty'] = Null) then
+      EditJumlahBarang.Text := IntToStr(ADOQueryPenjualanKeranjang['sale_qty']);
+  end;
+end;
+
+procedure TFormTambahPenjualan.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  FormTambahPenjualan.Hide;
+  FormMain.Button1Click(Sender);
+end;
+
+procedure TFormTambahPenjualan.FormShow(Sender: TObject);
+begin
+  with DataModule1.ADOQueryPenjualanKeranjang do
+  begin
+    Active := False;
+    SQL.Clear;
+    SQL.Add('SELECT * FROM sales_cart INNER JOIN goods ON sales_cart.goods_id=goods.id_goods WHERE sales_cart.admin_id=' + IntToStr(adminId));
+    Active := True;
+    EditKodeBarang.Clear;
+    EditNamaBarang.Clear;
+    EditHargaBarang.Clear;
+    EditJumlahBarang.Clear;
+  end;
+end;
+
+end.
