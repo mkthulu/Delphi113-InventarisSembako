@@ -1,5 +1,5 @@
 # Delphi 11.3 - Inventaris Sembako
-Delphi 11.3 Desktop Application - Goods Inventory
+Delphi 11.3 Desktop Application - Simple Goods Inventory
 
 # Perhatian!
 - Kompatibilitas Delphi 7 belum dites sepenuhnya, akan mungkin terjadi error.
